@@ -1,0 +1,28 @@
+{
+  "name": "algorithm",
+  "version": "1.0.0",
+  "description": "算法实现",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xjq7/algorithm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xjq7/algorithm/issues"
+  },
+  "homepage": "https://github.com/xjq7/algorithm#readme",
+  "dependencies": {
+    "mocha": "^10.1.0"
+  },
+  "devDependencies": {
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1"
+  }
+}
