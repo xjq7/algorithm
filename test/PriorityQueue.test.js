@@ -1,7 +1,7 @@
-const PriorityQueueHeap = require('../优先队列/PriorityQueue-Heap');
+const PriorityQueueHeap = require('../priorityQueue/PriorityQueue-Heap');
 const assert = require('assert');
 
-function testPriorityQueueHeap(input) {
+function testPriorityQueue(input) {
   const _output = [];
   const q = new PriorityQueueHeap({ compare: (a, b) => a > b });
 
@@ -41,7 +41,7 @@ function testPriorityQueueHeap(input) {
 describe('PriorityQueue-Heap', function () {
   it('should return true ', function () {
     assert.deepEqual(
-      testPriorityQueueHeap([
+      testPriorityQueue([
         'push',
         1,
         'top',
@@ -61,7 +61,7 @@ describe('PriorityQueue-Heap', function () {
       [true, 1, true, 2, true, true, true, 5, 5, 4]
     );
     assert.deepEqual(
-      testPriorityQueueHeap([
+      testPriorityQueue([
         'pop',
         'top',
         'push',
@@ -76,7 +76,7 @@ describe('PriorityQueue-Heap', function () {
       [null, null, true, 99, true, 99, 99, 5]
     );
     assert.deepEqual(
-      testPriorityQueueHeap([
+      testPriorityQueue([
         'push',
         3,
         'push',
