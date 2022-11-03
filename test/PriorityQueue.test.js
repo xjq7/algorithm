@@ -1,4 +1,4 @@
-const PriorityQueueHeap = require('../priorityQueue/PriorityQueue-Heap');
+const PriorityQueueHeap = require('../PriorityQueue/PriorityQueue-Heap');
 const assert = require('assert');
 
 function testPriorityQueue(input) {
