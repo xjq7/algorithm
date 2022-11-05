@@ -1,11 +1,21 @@
-const PriorityQueueHeap = require('../PriorityQueue/PriorityQueue-Heap');
-const assert = require('assert');
+import PriorityQueueHeap from '../PriorityQueue/PriorityQueue-Heap';
+import assert from 'assert';
 
-function testPriorityQueue(input) {
-  const _output = [];
+type Operator =
+  | 'push'
+  | 'pop'
+  | 'top'
+  | 'empty'
+  | 'size'
+  | 'clear'
+  | number
+  | unknown;
+
+function testPriorityQueue(input: Operator[]) {
+  const _output: (boolean | number | null)[] = [];
   const q = new PriorityQueueHeap({ compare: (a, b) => a > b });
 
-  let prev = null;
+  let prev: Operator = null;
   input.forEach((str) => {
     switch (str) {
       case 'push':
@@ -28,7 +38,7 @@ function testPriorityQueue(input) {
         break;
       default:
         if (prev === 'push') {
-          q.push(str);
+          q.push(str as number);
           _output.push(true);
         } else {
           prev = null;
