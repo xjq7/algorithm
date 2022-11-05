@@ -1,6 +1,5 @@
-export function randomAlpha(num: number) {
-  const alpha = 'abcdefgh';
-  // const alpha = 'abcdefghijklmnopqrstuvwxyz';
+export function randomAlpha(num: number, alphannum: number = 26) {
+  const alpha = 'abcdefghijklmnopqrstuvwxyz'.slice(0, alphannum);
   const idx = () => parseInt(String(Math.random() * alpha.length));
   return new Array(num)
     .fill(0)
