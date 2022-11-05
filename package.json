@@ -6,7 +6,8 @@
   "scripts": {
     "start": "ts-node",
     "test": "mocha test/*.test.ts",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "build": "tsc index.ts --outDir dist/"
   },
   "repository": {
     "type": "git",
